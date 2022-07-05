@@ -29,12 +29,12 @@
     ├── start.arc
     ```
     
-    * `input`:
-    * `input_split`:
-    * `CuZnCHO.pot`:
-    * `custom_para.py`:
-    * `pathsample.py`:
-    * `start.arc`:
+    * `input`:  Parameters for SSW-RS, which sample possible reaction pair (`lasp.in` file)
+    * `input_split`: Parameters for DESW, which identify transition state of possible reaction pair (`lasp.in` file)
+    * `CuZnCHO.pot`: G-NN potential file
+    * `custom_para.py`: Parameter for MMLPS
+    * `pathsample.py`: Main program
+    * `start.arc`: Starting structure for this branch. It should contain a slab and several molecules.
     
     To run the simulation, run the following command：
     ```bash
@@ -50,5 +50,5 @@
    
    To obtain the best reaction pathway, run:
    ```bash
-   pathanalyze.py -readallmin 2 -LGibbs 500 -ly ReacNProd.arc
+   pathanalyze.py -surface -readallmin 2 -LGibbs 500 -ly ReacNProd.arc
    ```
