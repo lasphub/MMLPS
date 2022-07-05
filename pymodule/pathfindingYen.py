@@ -1,5 +1,4 @@
 import mpmath
-from sklearn.metrics import jaccard_score
 import os
 from analyze_surfacemode import AllPair as AllPair_surfacemode
 from analyze_surfacemode import GibbsCorrDict
