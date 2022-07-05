@@ -43,5 +43,3 @@ GibbsCorrDict = {
     "CH3OH":
     0.202312 - 1.355580 + 8.61734e-5 * 500 * log(1 / 1),
 }
-GibbsCorrDict["HCOOH"] = 0
-GibbsCorrDict["HCHO"] = 0

@@ -367,17 +367,9 @@ class Path(list):
 #     "CO":
 #     -500 * 212.831 * 1.036e-5 + (5.931 + 8.671) * 1.036e-2 +
 #     8.61734e-5 * 500 * log(10 / 1) - 0.44,  # + 0.13,
-#     "HCHO":
-#     -500 * 239.102 * 1.036e-5 + (7.841 + 10.021) * 1.036e-2 +
-#     8.61734e-5 * 500 * log(1 / 1),  # + 0.70,
-#     # Gibbs Correction calculated by vaspkit. Remove ZPE, which is calculated by hNNCalPhono. 273.15K, 1 atm.
-#     "HCOOH":
-#     -0.320143 - 0.886839 + 8.61734e-5 * 500 * log(1 / 1),
 #     "CH3OH":
 #     0.202312 - 1.355580 + 8.61734e-5 * 500 * log(1 / 1),
 # }
-# GibbsCorrDict["HCOOH"] = 0
-# GibbsCorrDict["HCHO"] = 0
 # GibbsCorrDict["H2-HadsHads"] = GibbsCorrDict["H2"] + -0.5
 
 # NameList = ["CO2", "CO", "H2O", "H2", "HCHO", "CH3OH", "HCOOH"]

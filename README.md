@@ -13,4 +13,42 @@
 
 ## Usage
 
-1. add the `$YOURWORKDIR/pymodule`  to your `$PYTHONPATH`
+1. Add the `$XXX/pymodule` to your `$PYTHONPATH`
+
+2. Run a single branch of MMLPS:
+
+    The following directory structure should be prepared, as shown in the example
+    ```
+    job1
+    ├── sourcedir/
+        ├──input
+        ├──input_split
+        ├──CuZnCHO.pot
+    ├── custom_para.py
+    ├── pathsample.py
+    ├── start.arc
+    ```
+    
+    * `input`:
+    * `input_split`:
+    * `CuZnCHO.pot`:
+    * `custom_para.py`:
+    * `pathsample.py`:
+    * `start.arc`:
+    
+    To run the simulation, run the following command：
+    ```bash
+    python pathsample.py
+    ```
+    or you can submit it to the job queue with `jobs.sh`.
+    
+    An `analyze` directory should be built by `pathsample.py`, which contain all reaction pair sampled.
+
+3. Ananlyze a single branch of MMLPS:
+   
+   The analyzation is carried out by `pathanalyze.py` in `analyze` directory
+   
+   To obtain the best reaction pathway, run:
+   ```bash
+   pathanalyze.py -readallmin 2 -LGibbs 500 -ly ReacNProd.arc
+   ```
